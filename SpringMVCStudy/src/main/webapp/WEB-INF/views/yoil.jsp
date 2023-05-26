@@ -10,6 +10,6 @@
 	Hello world!  
 </h1>
 
-<P>  ${year }년  ${month }월 ${day }일은 ${yoil }입니다. </P>
+<P>  ${year }년  ${month }월 ${day }일은 ${yoil }요일입니다. </P>
 </body>
 </html>
