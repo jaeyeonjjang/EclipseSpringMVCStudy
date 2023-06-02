@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 //@WebServlet(urlPatterns={"/hello"}, loadOnStartup=1)
-	@WebServlet("/hello")
+	@WebServlet("/hello") // Servlet은 기본적으로 싱글톤임. 1개의 인스턴스만 만들고 계속 재활용한다.
 	public class HelloServlet extends HttpServlet {
 		// Servlet은 기본적으로 이 3개의 메서드가 있음. 얘네들은 우리가 직접 호출하지 않고 Servlet Container가 자동으로 호출함.
 		// 우리는 이 메서드의 내용만 채워주면 됨.

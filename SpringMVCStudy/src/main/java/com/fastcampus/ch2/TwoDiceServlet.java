@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/rollDice2")  // == @Controller+@RequestMapping // url 맵핑을 클래스 단위로 함.
 // TwoDice Controller를 서블릿으로 만든거임.
 // Controller는 HttpServlet 상속 안받는데 서블릿은 받아야함.
-// Java는 단일상속이라 웬만하면 상 안받는게 좋음.
+// Java는 단일상속이라 웬만하면 상속을 안받는게 좋음.
 public class TwoDiceServlet extends HttpServlet {
     int getRandomInt(int range) {
 	return new Random().nextInt(range)+1;
