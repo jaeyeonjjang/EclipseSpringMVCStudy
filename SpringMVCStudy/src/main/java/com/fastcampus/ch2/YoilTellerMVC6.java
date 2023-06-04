@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class YoilTellerMVC6 {
 	@ExceptionHandler(Exception.class)
 	public String catcher(Exception ex, BindingResult result) {
-		System.out.println("result=" + result);
-		FieldError error = result.getFieldError();
-		
-		System.out.println("code="+error.getCode());
-		System.out.println("field="+error.getField());
-		System.out.println("msg="+error.getDefaultMessage());
+			System.out.println("result=" + result);
+			FieldError error = result.getFieldError();
+			
+			System.out.println("code="+error.getCode());
+			System.out.println("field="+error.getField());
+			System.out.println("msg="+error.getDefaultMessage());
 		ex.printStackTrace();
 		return "yoilError";
 	}
