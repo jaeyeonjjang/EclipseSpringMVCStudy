@@ -8,15 +8,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class RegisterController {
-	// RequestMapping을 간단하게 사용하게 해주는게 GetMapping과 PostMapping이다.
-//	@RequestMapping("/register/add") // 아래와 같음.
-//	@GetMapping("/register/add")
-//	public String register() {
-//		return "registerForm"; // WEB-INF/views/registerForm/jsp
-//	}
+	@RequestMapping(value="/register/add", method={RequestMethod.GET, RequestMethod.POST})
+	public String register() {
+		return "registerForm"; // WEB-INF/views/registerForm/jsp
+	}
 	
 //	@RequestMapping("register/save", method=RequestMethod.POST) // 아래와 같음
 	@PostMapping("/register/save") // 스프링 4.3부터 가능
@@ -34,6 +33,6 @@ public class RegisterController {
 	}
 
 	private boolean isValid(User user) {
-		return true;
+		return false;
 	}
 }
